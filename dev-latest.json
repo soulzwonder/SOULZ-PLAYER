@@ -3,12 +3,12 @@
   "product": "SOULZ PLAYER",
   "channel": "dev",
   "release_available": false,
-  "version": "0.38-FIX32",
-  "build": 32,
+  "version": "0.38-FIX33",
+  "build": 33,
   "package_type": "app_zip",
   "auto_install": true,
   "download_url": "",
   "sha256": "",
   "rollback_version": "0.37",
-  "notes": "DEV auto-update channel is wired. release_available remains false until a complete Mac .app ZIP is built and physically verified."
+  "notes": "DEV package automation and one-click bootstrap are prepared. Keep release_available=false until the complete Mac app ZIP and controlled auto-update/rollback cycle pass physical Mac verification."
 }
