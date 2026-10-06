@@ -24,3 +24,12 @@ latest.json is the only stable update pointer. Release assets may change by vers
 
 ## Current status
 The official manifest endpoint is connected. No installable release is published yet, so release_available remains false.
+
+
+## FIX28 staging milestone
+The PLAYER candidate now has a staged-download path:
+- Download only from the HTTPS URL published in latest.json.
+- Stream and verify SHA-256 before accepting the package.
+- Reject mismatches without installation.
+- Store verified packages under the user's Application Support/SOULZ PLAYER/Updates directory.
+- Automatic replacement remains disabled until the separate rollback-safe installer helper passes physical Mac testing.
