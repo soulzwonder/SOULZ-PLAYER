@@ -2,10 +2,11 @@
   "schema": 1,
   "product": "SOULZ PLAYER",
   "channel": "stable",
-  "canonical_version": "0.37",
   "release_available": false,
-  "mac_asset_url": "",
+  "version": "0.37",
+  "build": 0,
+  "download_url": "",
   "sha256": "",
-  "notes": "No installable auto-update asset published yet. v0.37 remains canonical until a newer Mac build passes physical verification.",
-  "rollback_version": "0.37"
+  "rollback_version": "0.37",
+  "notes": "Official update source is connected. No installable update is published until a newer Mac build passes physical verification and its package SHA-256 is recorded."
 }
