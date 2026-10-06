@@ -33,3 +33,20 @@ The PLAYER candidate now has a staged-download path:
 - Reject mismatches without installation.
 - Store verified packages under the user's Application Support/SOULZ PLAYER/Updates directory.
 - Automatic replacement remains disabled until the separate rollback-safe installer helper passes physical Mac testing.
+
+
+## FIX32 development auto-update milestone
+Development builds use `dev-latest.json` as a separate channel from stable.
+
+When `release_available=true`, `package_type=app_zip`, `auto_install=true`, and the SHA-256 matches:
+1. PLAYER downloads the app ZIP while running.
+2. PLAYER verifies SHA-256 before any installation.
+3. PLAYER launches the bundled updater helper.
+4. PLAYER closes itself automatically.
+5. The helper validates the new .app and matching bundle identifier.
+6. The current app is backed up.
+7. The bundle is swapped and relaunched.
+8. Relaunch is checked; failure triggers rollback.
+9. The newest three rollback app backups are retained.
+
+This path is implemented in source but is not yet physically validated on the user's Mac. Do not publish a live dev app asset until that test is complete.
